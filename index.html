@@ -1,0 +1,75 @@
+
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SmartKid - מורה פרטי חכם</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: '#4A90E2',
+              secondary: '#50E3C2',
+              accent: '#F5A623',
+              background: '#F7F9FC',
+              textPrimary: '#333333',
+              textSecondary: '#555555',
+              correct: '#28a745',
+              incorrect: '#dc3545',
+            },
+            fontFamily: {
+              sans: ['Heebo', 'sans-serif'],
+            },
+            animation: {
+              'chest-shake': 'chest-shake 0.5s ease-in-out 3',
+              'chest-open': 'chest-open 1s forwards',
+              'star-burst': 'star-burst 0.8s ease-out forwards',
+            },
+            keyframes: {
+              'chest-shake': {
+                '0%, 100%': { transform: 'translateX(0)' },
+                '25%': { transform: 'translateX(-5px) rotate(-2deg)' },
+                '75%': { transform: 'translateX(5px) rotate(2deg)' },
+              },
+              'chest-open': {
+                '0%': { transform: 'scale(1)', filter: 'brightness(1)' },
+                '50%': { transform: 'scale(1.1)', filter: 'brightness(2)' },
+                '100%': { transform: 'scale(1)', filter: 'brightness(1.5) opacity(0)' },
+              },
+              'star-burst': {
+                 '0%': { transform: 'scale(0) rotate(0deg)', opacity: '0' },
+                 '50%': { transform: 'scale(1.2) rotate(180deg)', opacity: '1' },
+                 '100%': { transform: 'scale(1) rotate(360deg)', opacity: '0', top: '-100px' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <script type="importmap">
+{
+  "imports": {
+    "react-dom/": "https://esm.sh/react-dom@^19.1.1/",
+    "react/": "https://esm.sh/react@^19.1.1/",
+    "react": "https://esm.sh/react@^19.1.1",
+    "@google/genai": "https://esm.sh/@google/genai@^1.13.0",
+    "react-hot-toast": "https://esm.sh/react-hot-toast@^2.5.2",
+    "lucide-react": "https://esm.sh/lucide-react@^0.539.0",
+    "react-router-dom": "https://esm.sh/react-router-dom@^7.8.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
